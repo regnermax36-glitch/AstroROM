@@ -257,14 +257,16 @@ REPACK_ROM() {
     if GET_FEAT_STATUS DEBUG_BUILD; then
         LOG_INFO "ROM debug build enabled. Repacked images are available at $DIROUT"
     else
-        # For a release build, create the final flashable ZIP
+        # For a release build, create the final flashable ZIP (first output)
         BUILD_SUPER_IMAGE
         CREATE_FLASHABLE_ZIP
         
-        # Run Samsung-style manufacturing if enabled
+        # Run Samsung-style manufacturing if enabled (second output: firmware from .tar.md5)
         if [[ "${MANUFACTURE_FW:-false}" == "true" ]] || [[ -n "${PLATFORM:-}" ]]; then
             if command -v MANUFACTURE_FIRMWARE &>/dev/null; then
+                LOG_BEGIN "Creating firmware package from .tar.md5 files (second output)"
                 MANUFACTURE_FIRMWARE || LOG_WARN "Manufacturing process completed with warnings"
+                LOG_END "Firmware package ready at ${DIROUT}/firmware/"
             fi
         fi
     fi

@@ -171,54 +171,106 @@ SIGN_MANUFACTURING_COMPONENTS() {
 }
 
 CREATE_ODIN_PACKAGE() {
-    LOG_INFO "Creating complete ODIN package..."
+    LOG_INFO "Creating complete ODIN package from .tar.md5 files..."
     
-    local odin_dir="${DIROUT}/odin_package"
+    local odin_dir="${DIROUT}/firmware"
     mkdir -p "$odin_dir"
     
-    # Create AP package (system partitions)
+    local fw_source_dir="${FW_BASE}/${STOCK_MODEL}_${STOCK_CSC}"
+    
+    # Create AP package (system partitions) - modified version
     CREATE_AP_PACKAGE "$odin_dir" || {
         ERROR_EXIT "AP package creation failed"
         return 1
     }
     
-    # Create BL package (bootloader) - if available
-    if [[ -f "${DIROUT}/boot.img" ]] || [[ -f "${DIROUT}/vbmeta.img" ]]; then
-        CREATE_BL_PACKAGE "$odin_dir" || {
-            LOG_WARN "BL package creation skipped (not critical)"
-        }
+    # Copy BP (bootloader) from original firmware
+    if [[ -d "$fw_source_dir" ]]; then
+        local bp_file=$(find "$fw_source_dir" -maxdepth 1 -name "BL_*.tar.md5" | head -1)
+        if [[ -f "$bp_file" ]]; then
+            LOG_INFO "Copying BP (bootloader) from original firmware..."
+            cp "$bp_file" "$odin_dir/" || {
+                ERROR_EXIT "Failed to copy BP package"
+                return 1
+            }
+            LOG_INFO "BP package copied: $(basename "$bp_file")"
+        else
+            LOG_WARN "BP package not found in firmware source"
+        fi
     fi
     
-    # Create CP package (modem) - if available
-    if [[ -d "${FW_BASE}/${STOCK_MODEL}_${STOCK_CSC}" ]]; then
-        local cp_file=$(find "${FW_BASE}/${STOCK_MODEL}_${STOCK_CSC}" -name "CP_*.tar.md5" | head -1)
+    # Copy CP (modem) from original firmware
+    if [[ -d "$fw_source_dir" ]]; then
+        local cp_file=$(find "$fw_source_dir" -maxdepth 1 -name "CP_*.tar.md5" | head -1)
         if [[ -f "$cp_file" ]]; then
-            cp "$cp_file" "$odin_dir/" || LOG_WARN "CP package copy failed"
+            LOG_INFO "Copying CP (modem) from original firmware..."
+            cp "$cp_file" "$odin_dir/" || {
+                ERROR_EXIT "Failed to copy CP package"
+                return 1
+            }
+            LOG_INFO "CP package copied: $(basename "$cp_file")"
+        else
+            LOG_WARN "CP package not found in firmware source"
         fi
     fi
     
-    # Create CSC package - if available
-    if [[ -d "${FW_BASE}/${STOCK_MODEL}_${STOCK_CSC}" ]]; then
-        local csc_file=$(find "${FW_BASE}/${STOCK_MODEL}_${STOCK_CSC}" -name "CSC_*.tar.md5" | head -1)
-        if [[ -f "$csc_file" ]]; then
-            cp "$csc_file" "$odin_dir/" || LOG_WARN "CSC package copy failed"
+    # Copy HOME_CSC from original firmware (preferred over CSC)
+    if [[ -d "$fw_source_dir" ]]; then
+        local home_csc_file=$(find "$fw_source_dir" -maxdepth 1 -name "HOME_CSC_*.tar.md5" | head -1)
+        if [[ -f "$home_csc_file" ]]; then
+            LOG_INFO "Copying HOME_CSC from original firmware..."
+            cp "$home_csc_file" "$odin_dir/" || {
+                ERROR_EXIT "Failed to copy HOME_CSC package"
+                return 1
+            }
+            LOG_INFO "HOME_CSC package copied: $(basename "$home_csc_file")"
+        else
+            # Fallback to CSC if HOME_CSC not found
+            local csc_file=$(find "$fw_source_dir" -maxdepth 1 -name "CSC_*.tar.md5" | head -1)
+            if [[ -f "$csc_file" ]]; then
+                LOG_INFO "Copying CSC from original firmware (HOME_CSC not found)..."
+                cp "$csc_file" "$odin_dir/" || {
+                    ERROR_EXIT "Failed to copy CSC package"
+                    return 1
+                }
+                LOG_INFO "CSC package copied: $(basename "$csc_file")"
+            else
+                LOG_WARN "HOME_CSC/CSC package not found in firmware source"
+            fi
         fi
     fi
     
-    LOG_END "ODIN package created at $odin_dir"
+    LOG_END "Complete firmware package created at $odin_dir"
+    LOG_INFO "Firmware components: AP (modified), BP, CP, HOME_CSC (from original .tar.md5)"
     return 0
 }
 
 CREATE_AP_PACKAGE() {
     local odin_dir="$1"
-    local ap_file="${odin_dir}/AP_${STOCK_MODEL}_${STOCK_CSC}_AstroROM.tar.md5"
     
-    LOG_INFO "Creating AP package..."
+    # Get original AP filename pattern to match naming
+    local fw_source_dir="${FW_BASE}/${STOCK_MODEL}_${STOCK_CSC}"
+    local original_ap=$(find "$fw_source_dir" -maxdepth 1 -name "AP_*.tar.md5" | head -1)
+    local ap_basename=""
+    
+    if [[ -f "$original_ap" ]]; then
+        # Extract base name from original (e.g., AP_SM-F731B_EUX_...)
+        ap_basename=$(basename "$original_ap" .tar.md5)
+        # Replace with AstroROM identifier
+        ap_basename="${ap_basename%%_*}_${STOCK_MODEL}_${STOCK_CSC}_AstroROM"
+    else
+        # Fallback naming
+        ap_basename="AP_${STOCK_MODEL}_${STOCK_CSC}_AstroROM"
+    fi
+    
+    local ap_file="${odin_dir}/${ap_basename}.tar.md5"
+    
+    LOG_INFO "Creating AP package from modified super.img..."
     
     # Create temporary directory for AP contents
     local temp_ap_dir=$(mktemp -d)
     
-    # Copy super.img
+    # Copy super.img (modified from build)
     if [[ -f "${DIROUT}/super.img" ]]; then
         cp "${DIROUT}/super.img" "$temp_ap_dir/" || {
             ERROR_EXIT "Failed to copy super.img"
@@ -257,7 +309,7 @@ CREATE_AP_PACKAGE() {
     }
     cd - >/dev/null
     
-    # Calculate MD5 and append
+    # Calculate MD5 and append (Samsung format)
     local md5_hash=$(md5sum "$tar_file" | awk '{print $1}')
     echo "$md5_hash" >> "$tar_file"
     mv "$tar_file" "$ap_file"
@@ -336,10 +388,11 @@ GENERATE_FIRMWARE_CHECKSUMS() {
         echo "" >> "$checksum_file"
     done
     
-    # Generate checksums for ODIN packages
-    if [[ -d "$odin_dir" ]]; then
-        echo "# ODIN Packages:" >> "$checksum_file"
-        for pkg in "$odin_dir"/*.tar.md5; do
+    # Generate checksums for firmware packages
+    local firmware_dir="${DIROUT}/firmware"
+    if [[ -d "$firmware_dir" ]]; then
+        echo "# Firmware Packages (.tar.md5):" >> "$checksum_file"
+        for pkg in "$firmware_dir"/*.tar.md5; do
             [[ -f "$pkg" ]] || continue
             local pkg_name=$(basename "$pkg")
             local sha256=$(sha256sum "$pkg" | awk '{print $1}')
@@ -388,13 +441,20 @@ EOF
     
     cat >> "$report_file" <<EOF
 
-ODIN Package:
-  Location:         ${DIROUT}/odin_package/
-  AP Package:      AP_${STOCK_MODEL}_${STOCK_CSC}_AstroROM.tar.md5
+Firmware Package (from .tar.md5):
+  Location:         ${DIROUT}/firmware/
+  AP Package:      AP_${STOCK_MODEL}_${STOCK_CSC}_AstroROM.tar.md5 (modified)
 EOF
 
-    if [[ -f "${DIROUT}/odin_package/BL_${STOCK_MODEL}_${STOCK_CSC}_AstroROM.tar.md5" ]]; then
-        echo "  BL Package:      BL_${STOCK_MODEL}_${STOCK_CSC}_AstroROM.tar.md5" >> "$report_file"
+    # List all firmware packages
+    local firmware_dir="${DIROUT}/firmware"
+    if [[ -d "$firmware_dir" ]]; then
+        for pkg in "$firmware_dir"/*.tar.md5; do
+            [[ -f "$pkg" ]] || continue
+            local pkg_name=$(basename "$pkg")
+            local size=$(stat -c%s "$pkg")
+            echo "  - $pkg_name: $(numfmt --to=iec-i --suffix=B $size)" >> "$report_file"
+        done
     fi
 
     cat >> "$report_file" <<EOF

@@ -63,28 +63,33 @@ export LOCAL_FW_PATH="/path/to/oneui8.5/firmware"
 
 ## Output Structure
 
-After building, you'll find:
+After building, you'll find two outputs:
 
+### First Output: Flashable ZIP
 ```
 out/
-├── super.img                    # Main system image
-├── system.img                   # System partition
-├── product.img                  # Product partition
-├── vendor.img                   # Vendor partition
-├── system_ext.img               # System extension partition
-├── odin_package/               # Complete ODIN package
-│   ├── AP_*.tar.md5            # AP package (system)
-│   ├── BL_*.tar.md5            # BL package (bootloader)
-│   ├── CP_*.tar.md5            # CP package (modem)
-│   └── CSC_*.tar.md5           # CSC package (carrier)
+└── AstroROM_*.zip              # Flashable ZIP for recovery
+```
+
+### Second Output: Complete Firmware Package (from .tar.md5)
+```
+out/
+├── firmware/                   # Complete firmware package
+│   ├── AP_*.tar.md5            # AP package (modified system)
+│   ├── BL_*.tar.md5            # BP package (bootloader, from original)
+│   ├── CP_*.tar.md5            # CP package (modem, from original)
+│   └── HOME_CSC_*.tar.md5      # HOME_CSC package (carrier, from original)
 ├── metadata/                   # Samsung-style metadata
 │   ├── build_info.txt          # Build information
 │   ├── partition_info.txt      # Partition table
 │   └── device_info.txt         # Device information
 ├── checksums.txt               # All checksums
-├── manufacturing_report.txt    # Manufacturing report
-└── AstroROM_*.zip              # Flashable ZIP
+└── manufacturing_report.txt    # Manufacturing report
 ```
+
+**Note:** The firmware package contains:
+- **AP**: Modified with AstroROM changes (from build)
+- **BP, CP, HOME_CSC**: Copied directly from original firmware .tar.md5 files
 
 ## Configuration
 

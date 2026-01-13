@@ -1,8 +1,9 @@
-# Samsung Galaxy Device (b5q)
+# Samsung Galaxy Z Flip5 (b5q)
 
 ## Details
 - **Codename:** b5q 
-- **Model:** Samsung Galaxy Device
+- **Model:** SM-F731B
+- **Device:** Samsung Galaxy Z Flip5
 - **Platform:** OneUI 8.5
 - **Firmware Source:** Local selection enabled
 
