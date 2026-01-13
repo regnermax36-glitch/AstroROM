@@ -47,24 +47,22 @@ DOWNLOAD_FW() {
         [[ -v "processed_models[$mod]" ]] && continue
         processed_models["$mod"]=1
 
-        # First firmware (MAIN): Always download
+        # First firmware (MAIN): Always download - skip local check
         # Second firmware (STOCK/EXTRA): Use local if enabled
-        if [[ "${prefix}" == "STOCK" ]] || [[ "${prefix}" == "EXTRA" ]]; then
-            if [[ "${LOCAL_FW:-false}" == "true" ]]; then
-                # Use local firmware for second firmware (STOCK/EXTRA)
-                if [[ -f "$ASTROROM/scripts/local_fw_selector.sh" ]]; then
-                    source "$ASTROROM/scripts/local_fw_selector.sh"
-                    if SELECT_LOCAL_FIRMWARE "$target_fw" "$mod" "$reg"; then
-                        LOG_END "Using local firmware for ${prefix}"
-                        continue
-                    else
-                        LOG_INFO "Local firmware not found for ${prefix}, falling back to download..."
-                    fi
+        if [[ "${prefix}" != "MAIN" ]] && [[ "${LOCAL_FW:-false}" == "true" ]]; then
+            # Use local firmware for second firmware (STOCK/EXTRA only, never MAIN)
+            if [[ -f "$ASTROROM/scripts/local_fw_selector.sh" ]]; then
+                source "$ASTROROM/scripts/local_fw_selector.sh"
+                if SELECT_LOCAL_FIRMWARE "$target_fw" "$mod" "$reg"; then
+                    LOG_END "Using local firmware for ${prefix}"
+                    continue
+                else
+                    LOG_INFO "Local firmware not found for ${prefix}, falling back to download..."
                 fi
             fi
         fi
 
-        # Download firmware (for MAIN always, or STOCK/EXTRA if local not available)
+        # Download firmware (MAIN always downloads, STOCK/EXTRA downloads if local not available)
         FETCH_FW "$prefix" "$mod" "$reg" "$imei" "$FW_BASE" "$tmp_dir"
     done
 
