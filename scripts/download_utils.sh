@@ -142,7 +142,7 @@ rm -rf "$tmp" && mkdir -p "$tmp"
 
 (
   cd "$tmp" 
-  "$BIN/samfirm/samfirm.js" -m "$mod" -r "$reg" -i "$imei"
+  node "$BIN/samfirm/samfirm.js" -m "$mod" -r "$reg" -i "$imei"
 )
 
 
