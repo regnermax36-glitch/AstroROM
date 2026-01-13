@@ -1,0 +1,20 @@
+MODEL_NAME="Galaxy Device (b5q)"
+CODENAME="b5q"
+MODEL="SM-XXXXX"
+CSC="EUX"
+IMEI="350196551234562"
+STOCK_MODEL="SM-XXXXX"
+STOCK_CSC="EUX"
+STOCK_IMEI="350196551234562"
+#EXTRA_MODEL="SM-XXXXX"
+#EXTRA_CSC="EUX"
+#EXTRA_IMEI="356597450035295"
+VNDK="33"
+FILESYSTEM=erofs
+PLATFORM="oneui8.5"
+
+# Enable local firmware selection for OneUI 8.5
+LOCAL_FW=true
+
+# Enable Samsung-style manufacturing
+MANUFACTURE_FW=true

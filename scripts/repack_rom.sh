@@ -260,5 +260,12 @@ REPACK_ROM() {
         # For a release build, create the final flashable ZIP
         BUILD_SUPER_IMAGE
         CREATE_FLASHABLE_ZIP
+        
+        # Run Samsung-style manufacturing if enabled
+        if [[ "${MANUFACTURE_FW:-false}" == "true" ]] || [[ -n "${PLATFORM:-}" ]]; then
+            if command -v MANUFACTURE_FIRMWARE &>/dev/null; then
+                MANUFACTURE_FIRMWARE || LOG_WARN "Manufacturing process completed with warnings"
+            fi
+        fi
     fi
 }

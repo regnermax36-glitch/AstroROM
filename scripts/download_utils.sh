@@ -24,6 +24,17 @@ DOWNLOAD_FW() {
     local target_fw="${1:-}"
     local tmp_dir="${FW_BASE}/tmp_download"
 
+    # Check for local firmware selection first
+    if [[ "${LOCAL_FW:-false}" == "true" ]] || [[ -n "${LOCAL_FW_PATH:-}" ]]; then
+        # Source local firmware selector if available
+        if [[ -f "$ASTROROM/scripts/local_fw_selector.sh" ]]; then
+            source "$ASTROROM/scripts/local_fw_selector.sh"
+            if SELECT_LOCAL_FIRMWARE "$target_fw" "$MODEL" "$CSC"; then
+                LOG_END "Using local firmware selection"
+                return 0
+            fi
+        fi
+    fi
 
     _CHECK_NETWORK_CONNECTION && LOG_INFO "Internet connection [OK]" || LOG_WARN "Cannot connect to internet."
 

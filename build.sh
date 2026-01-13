@@ -56,6 +56,9 @@ for util in "$ASTROROM"/scripts/*.sh; do
     [[ -f "$util" ]] && source "$util"
 done
 
+# Source manufacturing tools
+[[ -f "$ASTROROM/scripts/manufacture_fw.sh" ]] && source "$ASTROROM/scripts/manufacture_fw.sh"
+
 
 EXEC_SCRIPT() {
     local script_file="$1"
