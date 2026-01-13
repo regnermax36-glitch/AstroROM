@@ -140,9 +140,18 @@ FETCH_FW() {
 LOG_INFO "Downloading firmware $ver_simple..."
 rm -rf "$tmp" && mkdir -p "$tmp"
 
+# Get absolute path to samfirm.js before changing directory
+local samfirm_path="$BIN/samfirm/samfirm.js"
+[[ ! -f "$samfirm_path" ]] && ERROR_EXIT "samfirm.js not found at $samfirm_path"
+
+# Convert to absolute path if not already
+if [[ "$samfirm_path" != /* ]]; then
+    samfirm_path="$(cd "$(dirname "$samfirm_path")" && pwd)/$(basename "$samfirm_path")"
+fi
+
 (
   cd "$tmp" 
-  node "$BIN/samfirm/samfirm.js" -m "$mod" -r "$reg" -i "$imei"
+  node "$samfirm_path" -m "$mod" -r "$reg" -i "$imei"
 )
 
 
