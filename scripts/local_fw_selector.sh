@@ -35,11 +35,19 @@ SELECT_LOCAL_FIRMWARE() {
         LOG_INFO "Please place your OneUI 8.5 firmware in: $LOCAL_FW_DIR"
         LOG_INFO "Expected structure: $LOCAL_FW_DIR/<MODEL>_<CSC>/AP_*.tar.md5"
         
-        if CONFIRM_ACTION "Would you like to specify a custom firmware path?" "false"; then
+        # Check for custom path if set
+        if [[ -n "${LOCAL_FW_PATH:-}" ]]; then
             SELECT_CUSTOM_FIRMWARE_PATH "$model" "$csc"
             return $?
         fi
         
+        # In non-interactive mode or if user declines, return failure to trigger download
+        if ! IS_GITHUB_ACTIONS && CONFIRM_ACTION "Would you like to specify a custom firmware path?" "false"; then
+            SELECT_CUSTOM_FIRMWARE_PATH "$model" "$csc"
+            return $?
+        fi
+        
+        # Return failure to allow fallback to download
         return 1
     fi
     

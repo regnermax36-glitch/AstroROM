@@ -13,7 +13,9 @@ VNDK="33"
 FILESYSTEM=erofs
 PLATFORM="oneui8.5"
 
-# Enable local firmware selection for OneUI 8.5
+# Firmware configuration:
+# - First firmware (MAIN): Will be DOWNLOADED from server
+# - Second firmware (STOCK): Will use LOCAL firmware if LOCAL_FW=true
 LOCAL_FW=true
 
 # Enable Samsung-style manufacturing

@@ -24,18 +24,6 @@ DOWNLOAD_FW() {
     local target_fw="${1:-}"
     local tmp_dir="${FW_BASE}/tmp_download"
 
-    # Check for local firmware selection first
-    if [[ "${LOCAL_FW:-false}" == "true" ]] || [[ -n "${LOCAL_FW_PATH:-}" ]]; then
-        # Source local firmware selector if available
-        if [[ -f "$ASTROROM/scripts/local_fw_selector.sh" ]]; then
-            source "$ASTROROM/scripts/local_fw_selector.sh"
-            if SELECT_LOCAL_FIRMWARE "$target_fw" "$MODEL" "$CSC"; then
-                LOG_END "Using local firmware selection"
-                return 0
-            fi
-        fi
-    fi
-
     _CHECK_NETWORK_CONNECTION && LOG_INFO "Internet connection [OK]" || LOG_WARN "Cannot connect to internet."
 
     [[ -z "$MODEL$EXTRA_MODEL$STOCK_MODEL" ]] && ERROR_EXIT "No firmware configs found."
@@ -52,7 +40,6 @@ DOWNLOAD_FW() {
 
         [[ -z "$mod" || -z "$reg" ]] && continue
 
-
         if [[ -n "$target_fw" && "${prefix,,}" != "${target_fw,,}" ]]; then
             continue
         fi
@@ -60,6 +47,24 @@ DOWNLOAD_FW() {
         [[ -v "processed_models[$mod]" ]] && continue
         processed_models["$mod"]=1
 
+        # First firmware (MAIN): Always download
+        # Second firmware (STOCK/EXTRA): Use local if enabled
+        if [[ "${prefix}" == "STOCK" ]] || [[ "${prefix}" == "EXTRA" ]]; then
+            if [[ "${LOCAL_FW:-false}" == "true" ]]; then
+                # Use local firmware for second firmware (STOCK/EXTRA)
+                if [[ -f "$ASTROROM/scripts/local_fw_selector.sh" ]]; then
+                    source "$ASTROROM/scripts/local_fw_selector.sh"
+                    if SELECT_LOCAL_FIRMWARE "$target_fw" "$mod" "$reg"; then
+                        LOG_END "Using local firmware for ${prefix}"
+                        continue
+                    else
+                        LOG_INFO "Local firmware not found for ${prefix}, falling back to download..."
+                    fi
+                fi
+            fi
+        fi
+
+        # Download firmware (for MAIN always, or STOCK/EXTRA if local not available)
         FETCH_FW "$prefix" "$mod" "$reg" "$imei" "$FW_BASE" "$tmp_dir"
     done
 
