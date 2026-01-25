@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NeuraMusic Brand Colors -->
+    <color name="neura_primary">#6366F1</color>
+    <color name="neura_secondary">#8B5CF6</color>
+    <color name="neura_accent">#EC4899</color>
+    <color name="neura_gradient_start">#667EEA</color>
+    <color name="neura_gradient_end">#764BA2</color>
+    
+    <!-- Material You Colors -->
+    <color name="purple_80">#D0BCFF</color>
+    <color name="purple_grey_80">#CCC2DC</color>
+    <color name="pink_80">#EFB8C8</color>
+    <color name="purple_40">#6650a4</color>
+    <color name="purple_grey_40">#625b71</color>
+    <color name="pink_40">#7D5260</color>
+    
+    <!-- Glassmorphism Colors -->
+    <color name="glass_background">#1AFFFFFF</color>
+    <color name="glass_border">#33FFFFFF</color>
+    <color name="glass_shadow">#1A000000</color>
+    
+    <!-- Neon Colors for Visualizer -->
+    <color name="neon_blue">#00D4FF</color>
+    <color name="neon_purple">#9D4EDD</color>
+    <color name="neon_pink">#FF006E</color>
+    <color name="neon_green">#39FF14</color>
+    <color name="neon_yellow">#FFFF00</color>
+    <color name="neon_orange">#FF4500</color>
+    
+    <!-- System Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
+

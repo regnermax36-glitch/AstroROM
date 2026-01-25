@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="glass_background">#1AFFFFFF</color>
+    <color name="glass_border">#33FFFFFF</color>
+    <color name="glass_shadow">#1A000000</color>
+    <color name="neon_blue">#00D4FF</color>
+    <color name="neon_green">#39FF14</color>
+    <color name="neon_orange">#FF4500</color>
+    <color name="neon_pink">#FF006E</color>
+    <color name="neon_purple">#9D4EDD</color>
+    <color name="neon_yellow">#FFFF00</color>
+    <color name="neura_accent">#EC4899</color>
+    <color name="neura_gradient_end">#764BA2</color>
+    <color name="neura_gradient_start">#667EEA</color>
+    <color name="neura_primary">#6366F1</color>
+    <color name="neura_secondary">#8B5CF6</color>
+    <color name="pink_40">#7D5260</color>
+    <color name="pink_80">#EFB8C8</color>
+    <color name="purple_40">#6650a4</color>
+    <color name="purple_80">#D0BCFF</color>
+    <color name="purple_grey_40">#625b71</color>
+    <color name="purple_grey_80">#CCC2DC</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">NeuraMusic</string>
+    <string name="discover">Discover</string>
+    <string name="favorite">Favorite</string>
+    <string name="home">Home</string>
+    <string name="library">Library</string>
+    <string name="lyrics">Lyrics</string>
+    <string name="neural_music_player">Neural Music Player</string>
+    <string name="next">Next</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="pause">Pause</string>
+    <string name="play">Play</string>
+    <string name="previous">Previous</string>
+    <string name="profile">Profile</string>
+    <string name="quantum_audio_experience">Quantum Audio Experience</string>
+    <string name="queue">Queue</string>
+    <string name="repeat">Repeat</string>
+    <string name="search">Search</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="visualizer">Visualizer</string>
+    <style name="Theme.NeuraMusic" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">@color/neura_primary</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <style name="Theme.NeuraMusic.Splash" parent="Theme.NeuraMusic">
+        <item name="android:windowBackground">@color/neura_gradient_start</item>
+    </style>
+</resources>

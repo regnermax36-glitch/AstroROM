@@ -1,0 +1,240 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.neuramusic.debug"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Audio permissions -->
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:6:5-80
+12-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:6:22-77
+13    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+13-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:7:5-75
+13-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:7:22-72
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:8:5-68
+14-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:8:22-65
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:9:5-77
+15-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:9:22-74
+16    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+16-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:10:5-92
+16-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:10:22-89
+17
+18    <!-- Network permissions for streaming and lyrics -->
+19    <uses-permission android:name="android.permission.INTERNET" />
+19-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:13:5-67
+19-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:13:22-64
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:14:5-79
+20-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:14:22-76
+21
+22    <!-- Notification permissions -->
+23    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+23-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:17:5-77
+23-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:17:22-74
+24
+25    <!-- Audio focus and media button -->
+26    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+26-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:20:5-80
+26-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:20:22-77
+27
+28    <!-- Vibration for haptic feedback -->
+29    <uses-permission android:name="android.permission.VIBRATE" />
+29-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:23:5-66
+29-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:23:22-63
+30
+31    <permission
+31-->[androidx.core:core:1.12.0] /root/.gradle/caches/transforms-3/e591f890b82ea9290d5b8666e90cfa36/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+32        android:name="com.neuramusic.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.12.0] /root/.gradle/caches/transforms-3/e591f890b82ea9290d5b8666e90cfa36/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.12.0] /root/.gradle/caches/transforms-3/e591f890b82ea9290d5b8666e90cfa36/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="com.neuramusic.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+35-->[androidx.core:core:1.12.0] /root/.gradle/caches/transforms-3/e591f890b82ea9290d5b8666e90cfa36/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.12.0] /root/.gradle/caches/transforms-3/e591f890b82ea9290d5b8666e90cfa36/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+36
+37    <application
+37-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:25:5-62:19
+38        android:name="com.neuramusic.NeuraApplication"
+38-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:26:9-41
+39        android:allowBackup="true"
+39-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:27:9-35
+40        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+40-->[androidx.core:core:1.12.0] /root/.gradle/caches/transforms-3/e591f890b82ea9290d5b8666e90cfa36/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+41        android:debuggable="true"
+42        android:extractNativeLibs="false"
+43        android:icon="@mipmap/ic_launcher"
+43-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:28:9-43
+44        android:label="@string/app_name"
+44-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:29:9-41
+45        android:requestLegacyExternalStorage="true"
+45-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:33:9-52
+46        android:roundIcon="@mipmap/ic_launcher_round"
+46-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:30:9-54
+47        android:supportsRtl="true"
+47-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:31:9-35
+48        android:theme="@style/Theme.NeuraMusic" >
+48-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:32:9-48
+49        <activity
+49-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:36:9-52:20
+50            android:name="com.neuramusic.MainActivity"
+50-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:37:13-41
+51            android:exported="true"
+51-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:38:13-36
+52            android:screenOrientation="portrait"
+52-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:40:13-49
+53            android:theme="@style/Theme.NeuraMusic" >
+53-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:39:13-52
+54            <intent-filter>
+54-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:41:13-44:29
+55                <action android:name="android.intent.action.MAIN" />
+55-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:42:17-69
+55-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:42:25-66
+56
+57                <category android:name="android.intent.category.LAUNCHER" />
+57-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:43:17-77
+57-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:43:27-74
+58            </intent-filter>
+59
+60            <!-- Handle audio files -->
+61            <intent-filter>
+61-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:47:13-51:29
+62                <action android:name="android.intent.action.VIEW" />
+62-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:48:17-69
+62-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:48:25-66
+63
+64                <category android:name="android.intent.category.DEFAULT" />
+64-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:49:17-76
+64-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:49:27-73
+65
+66                <data android:mimeType="audio/*" />
+66-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:50:17-52
+66-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:50:23-49
+67            </intent-filter>
+68        </activity>
+69
+70        <!-- Media button receiver -->
+71        <receiver
+71-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:55:9-60:20
+72            android:name="androidx.media.session.MediaButtonReceiver"
+72-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:55:19-76
+73            android:exported="false" >
+73-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:56:13-37
+74            <intent-filter>
+74-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:57:13-59:29
+75                <action android:name="android.intent.action.MEDIA_BUTTON" />
+75-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:58:17-77
+75-->/tmp/regnermax36-glitch/AstroROM/NeuraMusic/app/src/main/AndroidManifest.xml:58:25-74
+76            </intent-filter>
+77        </receiver>
+78
+79        <activity
+79-->[androidx.compose.ui:ui-tooling-android:1.5.4] /root/.gradle/caches/transforms-3/3091721fec8dcca6d4e69eb8880d3fa0/transformed/jetified-ui-tooling-release/AndroidManifest.xml:23:9-25:39
+80            android:name="androidx.compose.ui.tooling.PreviewActivity"
+80-->[androidx.compose.ui:ui-tooling-android:1.5.4] /root/.gradle/caches/transforms-3/3091721fec8dcca6d4e69eb8880d3fa0/transformed/jetified-ui-tooling-release/AndroidManifest.xml:24:13-71
+81            android:exported="true" />
+81-->[androidx.compose.ui:ui-tooling-android:1.5.4] /root/.gradle/caches/transforms-3/3091721fec8dcca6d4e69eb8880d3fa0/transformed/jetified-ui-tooling-release/AndroidManifest.xml:25:13-36
+82
+83        <provider
+83-->[androidx.emoji2:emoji2:1.4.0] /root/.gradle/caches/transforms-3/f4619c7fe78ea50f104b113deddee519/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:24:9-32:20
+84            android:name="androidx.startup.InitializationProvider"
+84-->[androidx.emoji2:emoji2:1.4.0] /root/.gradle/caches/transforms-3/f4619c7fe78ea50f104b113deddee519/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:25:13-67
+85            android:authorities="com.neuramusic.debug.androidx-startup"
+85-->[androidx.emoji2:emoji2:1.4.0] /root/.gradle/caches/transforms-3/f4619c7fe78ea50f104b113deddee519/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:26:13-68
+86            android:exported="false" >
+86-->[androidx.emoji2:emoji2:1.4.0] /root/.gradle/caches/transforms-3/f4619c7fe78ea50f104b113deddee519/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:27:13-37
+87            <meta-data
+87-->[androidx.emoji2:emoji2:1.4.0] /root/.gradle/caches/transforms-3/f4619c7fe78ea50f104b113deddee519/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:29:13-31:52
+88                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+88-->[androidx.emoji2:emoji2:1.4.0] /root/.gradle/caches/transforms-3/f4619c7fe78ea50f104b113deddee519/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:30:17-75
+89                android:value="androidx.startup" />
+89-->[androidx.emoji2:emoji2:1.4.0] /root/.gradle/caches/transforms-3/f4619c7fe78ea50f104b113deddee519/transformed/jetified-emoji2-1.4.0/AndroidManifest.xml:31:17-49
+90            <meta-data
+90-->[androidx.lifecycle:lifecycle-process:2.7.0] /root/.gradle/caches/transforms-3/c29d3dedb0ef34a8a813757d882c056a/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+91                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+91-->[androidx.lifecycle:lifecycle-process:2.7.0] /root/.gradle/caches/transforms-3/c29d3dedb0ef34a8a813757d882c056a/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+92                android:value="androidx.startup" />
+92-->[androidx.lifecycle:lifecycle-process:2.7.0] /root/.gradle/caches/transforms-3/c29d3dedb0ef34a8a813757d882c056a/transformed/jetified-lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+93            <meta-data
+93-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+94                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+95                android:value="androidx.startup" />
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+96        </provider>
+97
+98        <activity
+98-->[androidx.compose.ui:ui-test-manifest:1.5.4] /root/.gradle/caches/transforms-3/70e756c6cdc936735cc18dd1993ce3be/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:23:9-25:39
+99            android:name="androidx.activity.ComponentActivity"
+99-->[androidx.compose.ui:ui-test-manifest:1.5.4] /root/.gradle/caches/transforms-3/70e756c6cdc936735cc18dd1993ce3be/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:24:13-63
+100            android:exported="true" />
+100-->[androidx.compose.ui:ui-test-manifest:1.5.4] /root/.gradle/caches/transforms-3/70e756c6cdc936735cc18dd1993ce3be/transformed/jetified-ui-test-manifest-1.5.4/AndroidManifest.xml:25:13-36
+101
+102        <uses-library
+102-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/2158a017a1d0fc360813a066cbf146d0/transformed/jetified-window-1.0.0/AndroidManifest.xml:25:9-27:40
+103            android:name="androidx.window.extensions"
+103-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/2158a017a1d0fc360813a066cbf146d0/transformed/jetified-window-1.0.0/AndroidManifest.xml:26:13-54
+104            android:required="false" />
+104-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/2158a017a1d0fc360813a066cbf146d0/transformed/jetified-window-1.0.0/AndroidManifest.xml:27:13-37
+105        <uses-library
+105-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/2158a017a1d0fc360813a066cbf146d0/transformed/jetified-window-1.0.0/AndroidManifest.xml:28:9-30:40
+106            android:name="androidx.window.sidecar"
+106-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/2158a017a1d0fc360813a066cbf146d0/transformed/jetified-window-1.0.0/AndroidManifest.xml:29:13-51
+107            android:required="false" />
+107-->[androidx.window:window:1.0.0] /root/.gradle/caches/transforms-3/2158a017a1d0fc360813a066cbf146d0/transformed/jetified-window-1.0.0/AndroidManifest.xml:30:13-37
+108
+109        <service
+109-->[androidx.room:room-runtime:2.6.1] /root/.gradle/caches/transforms-3/246be416c2dae4ccb868bd4744974c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+110            android:name="androidx.room.MultiInstanceInvalidationService"
+110-->[androidx.room:room-runtime:2.6.1] /root/.gradle/caches/transforms-3/246be416c2dae4ccb868bd4744974c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+111            android:directBootAware="true"
+111-->[androidx.room:room-runtime:2.6.1] /root/.gradle/caches/transforms-3/246be416c2dae4ccb868bd4744974c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+112            android:exported="false" />
+112-->[androidx.room:room-runtime:2.6.1] /root/.gradle/caches/transforms-3/246be416c2dae4ccb868bd4744974c1e/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+113
+114        <receiver
+114-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+115            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+115-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+116            android:directBootAware="false"
+116-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+117            android:enabled="true"
+117-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+118            android:exported="true"
+118-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+119            android:permission="android.permission.DUMP" >
+119-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+120            <intent-filter>
+120-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+121                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+121-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+122            </intent-filter>
+123            <intent-filter>
+123-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+124                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+124-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+125            </intent-filter>
+126            <intent-filter>
+126-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+127                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+127-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+127-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+128            </intent-filter>
+129            <intent-filter>
+129-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+130                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+130-->[androidx.profileinstaller:profileinstaller:1.3.1] /root/.gradle/caches/transforms-3/5f5bb52b51266516711e8f1137f6bfb3/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+131            </intent-filter>
+132        </receiver>
+133    </application>
+134
+135</manifest>

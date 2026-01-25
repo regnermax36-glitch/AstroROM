@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/drawable_ic_search.xml.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/drawable/ic_search.xml"
+    },
+    {
+        "merged": "com.neuramusic.app-merged_res-88:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.neuramusic.app-main-90:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/drawable_ic_home.xml.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/drawable_ic_library.xml.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/drawable/ic_library.xml"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/drawable_ic_play.xml.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/drawable/ic_play.xml"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/drawable_ic_discover.xml.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/drawable/ic_discover.xml"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/drawable_ic_profile.xml.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/drawable/ic_profile.xml"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/drawable_ic_skip_next.xml.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/drawable/ic_skip_next.xml"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/drawable_ic_skip_previous.xml.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/drawable/ic_skip_previous.xml"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/drawable_ic_pause.xml.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/drawable/ic_pause.xml"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/root/.gradle/daemon/8.4/com.neuramusic.app-merged_res-88:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/root/.gradle/daemon/8.4/com.neuramusic.app-main-90:/mipmap-xhdpi/ic_launcher.png"
+    }
+]
