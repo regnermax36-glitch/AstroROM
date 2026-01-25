@@ -1,5 +1,6 @@
 package com.neuramusic.presentation.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -8,6 +9,10 @@ import kotlinx.coroutines.launch
 import kotlin.random.Random
 
 class AIEnhancedMusicViewModel : SimpleMusicViewModel() {
+    
+    companion object {
+        private const val TAG = "AIEnhancedMusicViewModel"
+    }
     
     // Additional AI-specific state (duration not in parent)
     private val _duration = MutableStateFlow(0f)
@@ -48,10 +53,16 @@ class AIEnhancedMusicViewModel : SimpleMusicViewModel() {
     )
     
     init {
-        // Initialize AI features
-        refreshAIRecommendations()
-        generateNeuralVisualizerData()
-        updateSmartPlaylistSuggestion()
+        Log.d(TAG, "Initializing AIEnhancedMusicViewModel")
+        try {
+            // Initialize AI features
+            refreshAIRecommendations()
+            generateNeuralVisualizerData()
+            updateSmartPlaylistSuggestion()
+            Log.d(TAG, "AIEnhancedMusicViewModel initialized successfully")
+        } catch (e: Exception) {
+            Log.e(TAG, "Error initializing AIEnhancedMusicViewModel", e)
+        }
     }
     
     // Override parent methods to add AI functionality
@@ -134,12 +145,19 @@ class AIEnhancedMusicViewModel : SimpleMusicViewModel() {
     
     fun refreshAIRecommendations() {
         viewModelScope.launch {
-            // Generate 6 random recommendations from the AI library
-            val shuffled = aiSongLibrary.shuffled()
-            _aiRecommendations.value = shuffled.take(6)
-            
-            // Update smart playlist suggestion
-            updateSmartPlaylistSuggestion()
+            try {
+                // Generate 6 random recommendations from the AI library
+                val shuffled = aiSongLibrary.shuffled()
+                _aiRecommendations.value = shuffled.take(6)
+                
+                // Update smart playlist suggestion
+                updateSmartPlaylistSuggestion()
+                Log.d(TAG, "AI recommendations refreshed: ${_aiRecommendations.value.size} items")
+            } catch (e: Exception) {
+                Log.e(TAG, "Error refreshing AI recommendations", e)
+                // Fallback to empty list
+                _aiRecommendations.value = emptyList()
+            }
         }
     }
     
