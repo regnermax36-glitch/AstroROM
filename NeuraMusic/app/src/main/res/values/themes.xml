@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.NeuraMusic" parent="android:Theme.Material.Light">
+        <item name="android:colorPrimary">@color/neura_primary</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    
+    <style name="Theme.NeuraMusic.Splash" parent="Theme.NeuraMusic">
+        <item name="android:windowBackground">@color/neura_gradient_start</item>
+    </style>
+</resources>

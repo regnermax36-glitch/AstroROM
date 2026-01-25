@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:scaleX="0.8"
+        android:scaleY="0.8"
+        android:pivotX="54"
+        android:pivotY="54">
+        <!-- Neural wave background -->
+        <path
+            android:fillColor="#6366F1"
+            android:pathData="M20,40 Q30,30 40,40 T60,40 T80,40 Q90,50 80,60 Q70,70 60,60 T40,60 T20,60 Q10,50 20,40 Z"
+            android:fillAlpha="0.3"/>
+        
+        <!-- Music note -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M54,20 C56,20 58,22 58,24 L58,60 C58,64 54,68 50,68 C46,68 42,64 42,60 C42,56 46,52 50,52 C52,52 54,53 54,54 L54,30 L70,26 L70,50 C70,54 66,58 62,58 C58,58 54,54 54,50 C54,46 58,42 62,42 C64,42 66,43 66,44 L66,24 C66,22 68,20 70,20 L74,20 C76,20 78,22 78,24 L78,28 L54,34 L54,20 Z"/>
+        
+        <!-- Neural connection points as paths -->
+        <path
+            android:fillColor="#8B5CF6"
+            android:pathData="M27,30 A3,3 0 1,1 33,30 A3,3 0 1,1 27,30 Z"
+            android:fillAlpha="0.8"/>
+        <path
+            android:fillColor="#EC4899"
+            android:pathData="M75.5,35 A2.5,2.5 0 1,1 80.5,35 A2.5,2.5 0 1,1 75.5,35 Z"
+            android:fillAlpha="0.8"/>
+        <path
+            android:fillColor="#06D6A0"
+            android:pathData="M23,75 A2,2 0 1,1 27,75 A2,2 0 1,1 23,75 Z"
+            android:fillAlpha="0.8"/>
+        <path
+            android:fillColor="#FFD23F"
+            android:pathData="M77.5,75 A2.5,2.5 0 1,1 82.5,75 A2.5,2.5 0 1,1 77.5,75 Z"
+            android:fillAlpha="0.8"/>
+        
+        <!-- Connection lines -->
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="1"
+            android:strokeAlpha="0.3"
+            android:pathData="M30,30 L54,40"/>
+        <path
+            android:strokeColor="#FFFFFF"
+            android:strokeWidth="1"
+            android:strokeAlpha="0.3"
+            android:pathData="M78,35 L70,40"/>
+    </group>
+</vector>
+

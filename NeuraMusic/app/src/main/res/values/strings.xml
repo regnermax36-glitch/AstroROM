@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NeuraMusic</string>
+    <string name="home">Home</string>
+    <string name="library">Library</string>
+    <string name="search">Search</string>
+    <string name="discover">Discover</string>
+    <string name="profile">Profile</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="repeat">Repeat</string>
+    <string name="favorite">Favorite</string>
+    <string name="queue">Queue</string>
+    <string name="lyrics">Lyrics</string>
+    <string name="visualizer">Visualizer</string>
+    <string name="neural_music_player">Neural Music Player</string>
+    <string name="quantum_audio_experience">Quantum Audio Experience</string>
+</resources>
+

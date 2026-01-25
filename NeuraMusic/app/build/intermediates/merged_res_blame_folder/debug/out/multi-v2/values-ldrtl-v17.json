@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.neuramusic.app-mergeDebugResources-86:/values-ldrtl-v17/values-ldrtl-v17.xml",
+            "map": [
+                {
+                    "source": "/root/.gradle/caches/transforms-3/e53681da11d9d78e6b1835fc31eaf290/transformed/material-1.4.0-beta01/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,191",
+                        "endColumns": "135,140",
+                        "endOffsets": "186,327"
+                    }
+                }
+            ]
+        }
+    ]
+}
