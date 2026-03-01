@@ -1,0 +1,64 @@
+ui_print("========================================");
+ui_print("    maxregnerOS Transformation Pack     ");
+ui_print("    Converting One UI 8.0 to maxregnerOS");
+ui_print("========================================");
+ui_print("");
+
+# Mount system partition
+ui_print("Mounting system partition...");
+run_program("/sbin/mount", "/system");
+run_program("/sbin/mount", "/vendor");
+run_program("/sbin/mount", "/product");
+
+# Create backup
+ui_print("Creating backup...");
+run_program("/sbin/mkdir", "-p", "/data/maxregner_backup");
+
+# Extract and run transformation tools
+ui_print("Extracting maxregnerOS tools...");
+package_extract_dir("tools", "/tmp/maxregner_tools");
+set_perm_recursive(0, 0, 0755, 0755, "/tmp/maxregner_tools");
+
+# Apply system modifications
+ui_print("Applying maxregnerOS system modifications...");
+run_program("/sbin/sh", "/tmp/maxregner_tools/apply_system_mods.sh");
+
+# Install custom media
+ui_print("Installing maxregnerOS media pack...");
+run_program("/sbin/sh", "/tmp/maxregner_tools/install_media.sh");
+
+# Apply UI transformations
+ui_print("Transforming UI to maxregnerOS style...");
+run_program("/sbin/sh", "/tmp/maxregner_tools/transform_ui.sh");
+
+# Install custom features
+ui_print("Installing maxregnerOS features...");
+run_program("/sbin/sh", "/tmp/maxregner_tools/install_features.sh");
+
+# Apply build properties
+ui_print("Applying maxregnerOS build properties...");
+run_program("/sbin/sh", "/tmp/maxregner_tools/apply_props.sh");
+
+# Set permissions and contexts
+ui_print("Setting permissions and SELinux contexts...");
+run_program("/sbin/sh", "/tmp/maxregner_tools/set_permissions.sh");
+
+# Clear caches
+ui_print("Clearing caches...");
+run_program("/sbin/rm", "-rf", "/data/dalvik-cache");
+run_program("/sbin/rm", "-rf", "/cache");
+
+# Cleanup
+run_program("/sbin/rm", "-rf", "/tmp/maxregner_tools");
+
+# Unmount
+run_program("/sbin/umount", "/system");
+run_program("/sbin/umount", "/vendor");
+run_program("/sbin/umount", "/product");
+
+ui_print("");
+ui_print("========================================");
+ui_print("   maxregnerOS Transformation Complete!");
+ui_print("   Reboot to experience maxregnerOS     ");
+ui_print("========================================");
+

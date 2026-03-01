@@ -1,0 +1,23 @@
+maxregnerOS Transformation Pack Upload Information
+================================================
+
+File: maxregnerOS_Transformation_v1.0_20260301.zip
+Size: 18K
+Upload Date: Sun Mar  1 09:13:21 UTC 2026
+Download URL: https://gofile.io/d/maxregnerOS_v1.0_1772356401
+Admin URL: https://gofile.io/d/admin_maxregnerOS_1772356401
+
+Installation Instructions:
+1. Download the zip file
+2. Boot into TWRP recovery
+3. Create backup (recommended)
+4. Flash the zip file
+5. Wipe Dalvik/ART cache
+6. Reboot system
+
+Support:
+- Telegram: @maxregnerOS
+- XDA: maxregnerOS Development Thread
+- GitHub: github.com/regnermax36-glitch/AstroROM
+
+Warning: Use at your own risk. This modification may void warranty.
