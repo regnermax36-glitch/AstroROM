@@ -1,0 +1,62 @@
+#!/sbin/sh
+
+# maxregnerOS Transformation Pack Update Binary
+# TWRP flashable zip installer for maxregnerOS
+
+OUTFD=$2
+ZIP=$3
+
+# Helper functions for TWRP output
+ui_print() {
+    echo "ui_print $1" > /proc/self/fd/$OUTFD
+    echo "ui_print" > /proc/self/fd/$OUTFD
+}
+
+# Extract and execute updater-script
+SCRIPT="/tmp/updater-script"
+unzip -o "$ZIP" META-INF/com/google/android/updater-script -d /tmp
+chmod 755 $SCRIPT
+
+# Function definitions for updater-script
+package_extract_dir() {
+    unzip -o "$ZIP" "$1/*" -d /
+    if [ $? -eq 0 ]; then
+        ui_print "Extracted $1"
+    else
+        ui_print "Failed to extract $1"
+    fi
+}
+
+set_perm_recursive() {
+    local uid=$1
+    local gid=$2
+    local dmode=$3
+    local fmode=$4
+    local path=$5
+    
+    find "$path" -type d -exec chmod $dmode {} \;
+    find "$path" -type f -exec chmod $fmode {} \;
+    chown -R $uid:$gid "$path"
+}
+
+run_program() {
+    "$@"
+    local result=$?
+    if [ $result -eq 0 ]; then
+        ui_print "Command succeeded: $*"
+    else
+        ui_print "Command failed: $* (exit code: $result)"
+    fi
+    return $result
+}
+
+# Execute the main updater script
+ui_print "Starting maxregnerOS transformation..."
+sh $SCRIPT
+
+# Cleanup
+rm -f $SCRIPT
+
+ui_print "Installation completed!"
+exit 0
+
