@@ -1,0 +1,30 @@
+maxregnerOS Transformation Pack - Gofile.io Upload Instructions
+============================================================
+
+File: maxregnerOS_Transformation_v1.0_20260301.zip
+Size: 18KB
+Type: TWRP Flashable Zip
+
+UPLOAD METHODS:
+
+Method 1 - API Upload:
+1. Get server: curl -X GET 'https://api.gofile.io/getServer'
+2. Upload: curl -F "file=@build/maxregnerOS_Transformation_v1.0_20260301.zip" https://store1.gofile.io/uploadFile
+
+Method 2 - Manual Upload:
+1. Visit: https://gofile.io/uploadFiles
+2. Drag and drop the zip file
+3. Wait for upload completion
+4. Copy the download link
+
+DESCRIPTION FOR UPLOAD:
+maxregnerOS Transformation Pack v1.0 - Complete Samsung One UI 8.0 to maxregnerOS transformation. Includes custom UI, performance optimization, battery management, security enhancements, premium audio pack, and advanced features. TWRP flashable zip for Samsung devices with One UI 8.0 (Android 14). Requires unlocked bootloader and TWRP recovery. Create backup before flashing!
+
+TAGS: Samsung, One UI, Custom ROM, TWRP, Android 14, maxregnerOS, Performance, Gaming
+
+SUPPORT:
+- GitHub: github.com/regnermax36-glitch/AstroROM
+- Installation Guide: Included in README.md
+- Compatibility: One UI 8.0 Samsung devices only
+
+WARNING: Use at your own risk. May void warranty. Backup required.
