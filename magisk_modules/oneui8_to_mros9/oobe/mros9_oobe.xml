@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MROS 9 Custom Out of Box Experience Configuration -->
+<mros9_oobe version="1.0">
+    
+    <!-- Welcome Screen Configuration -->
+    <welcome_screen>
+        <title>Welcome to MROS 9</title>
+        <subtitle>The Future of Mobile Operating Systems</subtitle>
+        <description>Experience the next generation of mobile computing with AI-powered features, enhanced performance, and intuitive design.</description>
+        <background_color>#1a1a2e</background_color>
+        <text_color>#ffffff</text_color>
+        <accent_color>#16213e</accent_color>
+        <animation_duration>2000</animation_duration>
+        <logo_path>/system/media/mros9/logo.png</logo_path>
+    </welcome_screen>
+    
+    <!-- AI Features Setup -->
+    <ai_setup>
+        <title>AI-Powered Intelligence</title>
+        <description>Enable MROS 9's advanced AI features for a smarter, more personalized experience.</description>
+        <features>
+            <feature id="smart_assistant" enabled="true">
+                <name>Smart Assistant</name>
+                <description>Your personal AI assistant for daily tasks</description>
+            </feature>
+            <feature id="adaptive_battery" enabled="true">
+                <name>Adaptive Battery</name>
+                <description>AI learns your usage patterns to optimize battery life</description>
+            </feature>
+            <feature id="smart_suggestions" enabled="true">
+                <name>Smart Suggestions</name>
+                <description>Contextual suggestions based on your behavior</description>
+            </feature>
+            <feature id="enhanced_camera" enabled="true">
+                <name>AI Camera Enhancement</name>
+                <description>Professional-grade photos with AI processing</description>
+            </feature>
+        </features>
+    </ai_setup>
+    
+    <!-- Personalization Setup -->
+    <personalization>
+        <title>Make It Yours</title>
+        <description>Customize MROS 9 to match your style and preferences.</description>
+        <themes>
+            <theme id="mros_dark" default="true">
+                <name>MROS Dark</name>
+                <preview>/system/media/mros9/themes/dark_preview.png</preview>
+            </theme>
+            <theme id="mros_light">
+                <name>MROS Light</name>
+                <preview>/system/media/mros9/themes/light_preview.png</preview>
+            </theme>
+            <theme id="mros_cosmic">
+                <name>MROS Cosmic</name>
+                <preview>/system/media/mros9/themes/cosmic_preview.png</preview>
+            </theme>
+        </themes>
+        <wallpapers>
+            <wallpaper id="mros_gradient" default="true">
+                <name>MROS Gradient</name>
+                <path>/system/media/mros9/wallpapers/gradient.jpg</path>
+            </wallpaper>
+            <wallpaper id="mros_abstract">
+                <name>MROS Abstract</name>
+                <path>/system/media/mros9/wallpapers/abstract.jpg</path>
+            </wallpaper>
+            <wallpaper id="mros_nature">
+                <name>MROS Nature</name>
+                <path>/system/media/mros9/wallpapers/nature.jpg</path>
+            </wallpaper>
+        </wallpapers>
+    </personalization>
+    
+    <!-- Privacy & Security Setup -->
+    <privacy_security>
+        <title>Privacy & Security</title>
+        <description>Configure your privacy settings and security features.</description>
+        <options>
+            <option id="biometric_unlock" enabled="true">
+                <name>Biometric Unlock</name>
+                <description>Use fingerprint or face unlock for enhanced security</description>
+            </option>
+            <option id="app_permissions" enabled="true">
+                <name>Smart App Permissions</name>
+                <description>AI-powered permission management for better privacy</description>
+            </option>
+            <option id="secure_folder" enabled="true">
+                <name>Secure Folder</name>
+                <description>Protected space for sensitive apps and data</description>
+            </option>
+            <option id="privacy_dashboard" enabled="true">
+                <name>Privacy Dashboard</name>
+                <description>Monitor and control app access to your data</description>
+            </option>
+        </options>
+    </privacy_security>
+    
+    <!-- Performance Setup -->
+    <performance>
+        <title>Performance Optimization</title>
+        <description>Configure MROS 9 for optimal performance based on your usage.</description>
+        <profiles>
+            <profile id="balanced" default="true">
+                <name>Balanced</name>
+                <description>Optimal balance of performance and battery life</description>
+            </profile>
+            <profile id="performance">
+                <name>High Performance</name>
+                <description>Maximum performance for demanding tasks</description>
+            </profile>
+            <profile id="battery_saver">
+                <name>Battery Saver</name>
+                <description>Extended battery life with optimized performance</description>
+            </profile>
+            <profile id="gaming">
+                <name>Gaming Mode</name>
+                <description>Optimized for gaming with enhanced graphics and responsiveness</description>
+            </profile>
+        </profiles>
+    </performance>
+    
+    <!-- Connectivity Setup -->
+    <connectivity>
+        <title>Stay Connected</title>
+        <description>Set up your network connections and sharing preferences.</description>
+        <features>
+            <feature id="wifi_optimization" enabled="true">
+                <name>WiFi Optimization</name>
+                <description>Intelligent WiFi management for better connectivity</description>
+            </feature>
+            <feature id="mobile_data_saver" enabled="true">
+                <name>Smart Data Saver</name>
+                <description>AI-powered data usage optimization</description>
+            </feature>
+            <feature id="hotspot_enhancement" enabled="true">
+                <name>Enhanced Hotspot</name>
+                <description>Improved mobile hotspot with better range and speed</description>
+            </feature>
+        </features>
+    </connectivity>
+    
+    <!-- Completion Screen -->
+    <completion>
+        <title>Welcome to MROS 9!</title>
+        <subtitle>Your device is ready to use</subtitle>
+        <description>Enjoy the enhanced features, improved performance, and intelligent capabilities of MROS 9.</description>
+        <tips>
+            <tip>Swipe up from the bottom to access the app drawer</tip>
+            <tip>Long press on the home screen to customize widgets</tip>
+            <tip>Use the AI assistant by saying "Hey MROS"</tip>
+            <tip>Access quick settings by swiping down from the top</tip>
+        </tips>
+        <celebration_animation>true</celebration_animation>
+    </completion>
+    
+</mros9_oobe>

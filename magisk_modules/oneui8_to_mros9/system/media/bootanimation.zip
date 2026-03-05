@@ -1,0 +1,22 @@
+# This would be a binary file containing the MROS 9 boot animation
+# In a real implementation, this would be a ZIP file containing:
+# - desc.txt (animation description)
+# - part0/ folder with PNG frames for the animation
+# - part1/ folder with additional animation frames if needed
+# 
+# For this example, we'll create a placeholder that indicates
+# where the actual boot animation ZIP file should be placed
+#
+# The boot animation should feature:
+# - MROS 9 logo with smooth fade-in
+# - Particle effects and modern animations
+# - Dark theme with blue accents matching the color scheme
+# - Duration: approximately 3-5 seconds
+#
+# Boot animation specs:
+# Resolution: 1080x1920 (adjusts automatically to device)
+# Format: PNG frames
+# FPS: 30
+# Colors: Dark theme (#1a1a2e background, #4a90e2 accents)
+
+PLACEHOLDER_BOOT_ANIMATION=true

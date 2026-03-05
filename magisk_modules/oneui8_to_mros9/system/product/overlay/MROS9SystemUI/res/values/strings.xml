@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MROS 9 System UI String Overlays -->
+    
+    <!-- Status Bar -->
+    <string name="status_bar_settings_settings_button">MROS Settings</string>
+    <string name="status_bar_settings_wifi_button">MROS WiFi</string>
+    <string name="status_bar_settings_airplane">MROS Flight Mode</string>
+    
+    <!-- Quick Settings -->
+    <string name="quick_settings_wifi_label">MROS WiFi</string>
+    <string name="quick_settings_bluetooth_label">MROS Bluetooth</string>
+    <string name="quick_settings_location_label">MROS Location</string>
+    <string name="quick_settings_flashlight_label">MROS Flashlight</string>
+    <string name="quick_settings_rotation_unlocked_label">MROS Auto-rotate</string>
+    <string name="quick_settings_dnd_label">MROS Focus Mode</string>
+    <string name="quick_settings_battery_saver_label">MROS Power Saver</string>
+    
+    <!-- Notifications -->
+    <string name="notification_channel_alerts">MROS Alerts</string>
+    <string name="notification_channel_battery">MROS Battery</string>
+    <string name="notification_channel_general">MROS System</string>
+    
+    <!-- Power Menu -->
+    <string name="global_action_power_off">Power off</string>
+    <string name="global_action_restart">Restart to MROS</string>
+    <string name="global_action_emergency">Emergency</string>
+    <string name="global_action_bug_report">MROS Bug Report</string>
+    
+    <!-- Lock Screen -->
+    <string name="keyguard_unlock">Unlock with MROS</string>
+    <string name="keyguard_retry">Try again</string>
+    <string name="keyguard_emergency_call">Emergency call</string>
+    
+    <!-- AI Assistant -->
+    <string name="mros_ai_assistant_title">MROS AI Assistant</string>
+    <string name="mros_ai_assistant_subtitle">How can I help you today?</string>
+    <string name="mros_ai_listening">Listening...</string>
+    <string name="mros_ai_processing">Processing your request...</string>
+    
+    <!-- Battery -->
+    <string name="battery_low_title">MROS Battery Optimization</string>
+    <string name="battery_low_subtitle">AI is optimizing your battery usage</string>
+    
+    <!-- Performance -->
+    <string name="performance_mode_gaming">MROS Gaming Mode Active</string>
+    <string name="performance_mode_balanced">MROS Balanced Mode</string>
+    <string name="performance_mode_power_save">MROS Power Save Mode</string>
+    
+</resources>

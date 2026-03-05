@@ -1,0 +1,17 @@
+# MROS 9 Boot Complete Sound
+# This would be an OGG audio file containing a custom boot complete sound
+# 
+# Sound characteristics:
+# - Modern, futuristic tone
+# - Duration: 1-2 seconds
+# - Frequency: Pleasant, not jarring
+# - Volume: Moderate level
+# - Style: Sci-fi inspired, matching MROS 9 theme
+#
+# The sound should convey:
+# - System readiness
+# - Modern technology
+# - Professional quality
+# - Brand identity for MROS 9
+
+PLACEHOLDER_BOOT_SOUND=true
