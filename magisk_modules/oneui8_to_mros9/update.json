@@ -1,0 +1,7 @@
+{
+  "version": "v1.0.0",
+  "versionCode": 1,
+  "zipUrl": "https://github.com/regnermax36-glitch/AstroROM/releases/download/v1.0.0/MROS9_Transformation_v1.0.0.zip",
+  "changelog": "https://raw.githubusercontent.com/regnermax36-glitch/AstroROM/sixteen/magisk_modules/oneui8_to_mros9/CHANGELOG.md",
+  "notes": "🌟 MROS 9 Complete Transformation v1.0.0\n\n✨ Features:\n• Complete One UI 8 to MROS 9 visual transformation\n• Custom OOBE (Out of Box Experience)\n• AI-powered features and optimizations\n• Enhanced performance and gaming mode\n• Custom boot animation and sounds\n• Network and connectivity improvements\n• Adaptive battery and smart suggestions\n\n📱 Compatibility:\n• Samsung Galaxy devices with One UI 8\n• Android 14+ recommended\n• 4GB+ RAM (6GB+ for full AI features)\n\n🔧 Installation:\n1. Install through Magisk Manager\n2. Reboot device\n3. Follow MROS 9 OOBE setup\n4. Enjoy your transformed device!\n\n⚠️ Important:\n• First boot may take longer\n• Backup your device before installation\n• Check compatibility with your device\n\n🌟 Welcome to the future with MROS 9!"
+}

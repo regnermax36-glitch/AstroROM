@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MROS 9 Launcher Strings -->
+    
+    <!-- App Drawer -->
+    <string name="all_apps_button_label">MROS 9 Apps</string>
+    <string name="all_apps_home_button_label">MROS 9 Home</string>
+    <string name="all_apps_search_bar_hint">Search MROS 9 Apps</string>
+    
+    <!-- Home Screen -->
+    <string name="home_screen">MROS 9 Home</string>
+    <string name="folder_hint_text">MROS 9 Folder</string>
+    <string name="default_scroll_format">MROS 9 Page %1$d of %2$d</string>
+    
+    <!-- Widgets -->
+    <string name="widget_button_text">MROS 9 Widgets</string>
+    <string name="widget_dims_format">MROS 9 Widget %1$d × %2$d</string>
+    <string name="add_widget_tooltip">Add MROS 9 Widget</string>
+    
+    <!-- Shortcuts -->
+    <string name="long_press_widget_to_add">Touch &amp; hold to add MROS 9 widget</string>
+    <string name="long_accessible_way_to_add">Touch &amp; hold, then double-tap to add MROS 9 widget</string>
+    <string name="widget_accessible_dims_format">MROS 9 Widget %1$d wide by %2$d high</string>
+    
+    <!-- Wallpapers -->
+    <string name="wallpaper_button_text">MROS 9 Wallpapers</string>
+    <string name="wallpaper_instructions">Set MROS 9 wallpaper</string>
+    
+    <!-- Settings -->
+    <string name="settings_button_text">MROS 9 Settings</string>
+    <string name="launcher_settings">MROS 9 Launcher Settings</string>
+    
+    <!-- Search -->
+    <string name="search_hint">Search MROS 9</string>
+    <string name="search_no_results">No MROS 9 results found</string>
+    
+    <!-- Accessibility -->
+    <string name="accessibility_search_button">MROS 9 Search</string>
+    <string name="accessibility_voice_search_button">MROS 9 Voice Search</string>
+    
+    <!-- Notifications -->
+    <string name="notification_dots_title">MROS 9 Notification Dots</string>
+    <string name="notification_dots_desc_on">MROS 9 notification dots are on</string>
+    <string name="notification_dots_desc_off">MROS 9 notification dots are off</string>
+    
+    <!-- App Actions -->
+    <string name="action_add_to_workspace">Add to MROS 9 Home</string>
+    <string name="action_move_to_workspace">Move to MROS 9 Home</string>
+    <string name="action_move_screen_left">Move MROS 9 screen left</string>
+    <string name="action_move_screen_right">Move MROS 9 screen right</string>
+    <string name="action_resize">Resize MROS 9 widget</string>
+    <string name="action_increase_width">Increase MROS 9 width</string>
+    <string name="action_increase_height">Increase MROS 9 height</string>
+    <string name="action_decrease_width">Decrease MROS 9 width</string>
+    <string name="action_decrease_height">Decrease MROS 9 height</string>
+    
+    <!-- Folder Actions -->
+    <string name="folder_opened">MROS 9 folder opened</string>
+    <string name="folder_tap_to_close">Tap to close MROS 9 folder</string>
+    <string name="folder_tap_to_rename">Tap to rename MROS 9 folder</string>
+    <string name="folder_closed">MROS 9 folder closed</string>
+    <string name="folder_renamed">MROS 9 folder renamed</string>
+    <string name="folder_name_format">MROS 9 Folder: %1$s</string>
+    
+    <!-- App Info -->
+    <string name="app_info_drop_target_label">MROS 9 App info</string>
+    <string name="uninstall_drop_target_label">Uninstall from MROS 9</string>
+    <string name="remove_drop_target_label">Remove from MROS 9</string>
+    
+    <!-- Permissions -->
+    <string name="permlab_install_shortcut">Install MROS 9 shortcuts</string>
+    <string name="permdesc_install_shortcut">Allows an app to add MROS 9 shortcuts without user intervention.</string>
+    <string name="permlab_read_settings">Read MROS 9 settings and shortcuts</string>
+    <string name="permdesc_read_settings">Allows the app to read MROS 9 settings and shortcuts.</string>
+    <string name="permlab_write_settings">Write MROS 9 settings and shortcuts</string>
+    <string name="permdesc_write_settings">Allows the app to change MROS 9 settings and shortcuts.</string>
+    
+    <!-- Backup -->
+    <string name="backup_progress_text">Backing up MROS 9 data...</string>
+    <string name="restore_progress_text">Restoring MROS 9 data...</string>
+    
+    <!-- Loading -->
+    <string name="loading_text">Loading MROS 9...</string>
+    <string name="switching_workspace_text">Switching MROS 9 workspace...</string>
+    
+    <!-- Errors -->
+    <string name="activity_not_found">MROS 9 app isn\'t installed.</string>
+    <string name="safemode_shortcut_error">Downloaded MROS 9 app disabled in Safe mode</string>
+    <string name="safemode_widget_error">MROS 9 widgets disabled in Safe mode</string>
+    
+    <!-- Shortcuts -->
+    <string name="shortcut_duplicate_label">MROS 9 shortcut already exists</string>
+    <string name="shortcut_not_available">MROS 9 shortcut isn\'t available</string>
+    
+    <!-- Workspace -->
+    <string name="workspace_scroll_format">MROS 9 Home screen %1$d of %2$d</string>
+    <string name="workspace_new_page">New MROS 9 page</string>
+    
+    <!-- All Apps -->
+    <string name="all_apps_loading_message">Loading MROS 9 apps...</string>
+    <string name="all_apps_no_search_results">No MROS 9 apps found matching \"%1$s\"</string>
+    
+    <!-- Work Profile -->
+    <string name="work_folder_name">MROS 9 Work</string>
+    <string name="work_profile_badged_app_label">MROS 9 Work %1$s</string>
+    
+    <!-- Suggestions -->
+    <string name="suggested_apps_header">MROS 9 Suggested Apps</string>
+    <string name="suggested_apps_label">MROS 9 App Suggestions</string>
+    
+    <!-- Deep Shortcuts -->
+    <string name="action_deep_shortcut">MROS 9 Shortcuts</string>
+    <string name="shortcuts_menu_description">MROS 9 shortcuts for %1$s</string>
+    
+    <!-- Custom Features -->
+    <string name="mros_ai_suggestions">MROS 9 AI Suggestions</string>
+    <string name="mros_smart_folders">MROS 9 Smart Folders</string>
+    <string name="mros_adaptive_icons">MROS 9 Adaptive Icons</string>
+    <string name="mros_gesture_navigation">MROS 9 Gesture Navigation</string>
+    <string name="mros_performance_mode">MROS 9 Performance Mode</string>
+    
+</resources>

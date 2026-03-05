@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MROS 9 Color Scheme -->
+    
+    <!-- Primary Colors -->
+    <color name="system_primary_color">#1a1a2e</color>
+    <color name="system_secondary_color">#16213e</color>
+    <color name="system_accent_color">#0f3460</color>
+    <color name="system_surface_color">#0e1b2e</color>
+    
+    <!-- Status Bar Colors -->
+    <color name="status_bar_background">#1a1a2e</color>
+    <color name="status_bar_icon_color">#ffffff</color>
+    <color name="status_bar_clock_color">#ffffff</color>
+    
+    <!-- Quick Settings Colors -->
+    <color name="qs_background_color">#1a1a2e</color>
+    <color name="qs_tile_background">#16213e</color>
+    <color name="qs_tile_background_active">#0f3460</color>
+    <color name="qs_tile_text_color">#ffffff</color>
+    <color name="qs_tile_icon_color">#ffffff</color>
+    
+    <!-- Notification Colors -->
+    <color name="notification_background">#16213e</color>
+    <color name="notification_text_color">#ffffff</color>
+    <color name="notification_title_color">#ffffff</color>
+    <color name="notification_icon_color">#ffffff</color>
+    
+    <!-- Navigation Bar Colors -->
+    <color name="navigation_bar_background">#1a1a2e</color>
+    <color name="navigation_bar_icon_color">#ffffff</color>
+    
+    <!-- Lock Screen Colors -->
+    <color name="keyguard_background">#0e1b2e</color>
+    <color name="keyguard_clock_color">#ffffff</color>
+    <color name="keyguard_date_color">#cccccc</color>
+    <color name="keyguard_notification_background">#16213e</color>
+    
+    <!-- AI Assistant Colors -->
+    <color name="mros_ai_primary">#4a90e2</color>
+    <color name="mros_ai_secondary">#357abd</color>
+    <color name="mros_ai_background">#1a1a2e</color>
+    <color name="mros_ai_text">#ffffff</color>
+    
+    <!-- Battery Colors -->
+    <color name="battery_level_color">#4caf50</color>
+    <color name="battery_level_low">#ff9800</color>
+    <color name="battery_level_critical">#f44336</color>
+    <color name="battery_saver_color">#ffc107</color>
+    
+    <!-- Performance Mode Colors -->
+    <color name="performance_gaming">#e91e63</color>
+    <color name="performance_balanced">#4caf50</color>
+    <color name="performance_power_save">#ff9800</color>
+    
+    <!-- Connectivity Colors -->
+    <color name="wifi_signal_color">#2196f3</color>
+    <color name="mobile_signal_color">#4caf50</color>
+    <color name="bluetooth_color">#3f51b5</color>
+    
+    <!-- System Alert Colors -->
+    <color name="system_alert_info">#2196f3</color>
+    <color name="system_alert_warning">#ff9800</color>
+    <color name="system_alert_error">#f44336</color>
+    <color name="system_alert_success">#4caf50</color>
+    
+    <!-- Overlay Colors -->
+    <color name="overlay_background">#80000000</color>
+    <color name="overlay_surface">#1a1a2e</color>
+    <color name="overlay_text">#ffffff</color>
+    
+    <!-- Ripple Effects -->
+    <color name="ripple_material_light">#33ffffff</color>
+    <color name="ripple_material_dark">#33ffffff</color>
+    
+</resources>

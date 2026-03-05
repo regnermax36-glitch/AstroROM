@@ -1,0 +1,7 @@
+id=oneui8_to_mros9_transform
+name=One UI 8 to MROS 9 Complete Transformation
+version=v1.0.0
+versionCode=1
+author=AstroROM Team
+description=Complete transformation module that converts One UI 8 into MROS 9 with new OOBE, enhanced features, and visual overhaul. Includes AI features, custom animations, and system-wide theming.
+updateJson=https://raw.githubusercontent.com/regnermax36-glitch/AstroROM/sixteen/magisk_modules/oneui8_to_mros9/update.json
