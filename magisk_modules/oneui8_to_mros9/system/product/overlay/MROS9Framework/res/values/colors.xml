@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- MROS 9 Framework Colors -->
+    
+    <!-- Primary System Colors -->
+    <color name="primary_material_dark">#1a1a2e</color>
+    <color name="primary_material_light">#f5f5f5</color>
+    <color name="accent_material_dark">#4a90e2</color>
+    <color name="accent_material_light">#357abd</color>
+    
+    <!-- Background Colors -->
+    <color name="background_material_dark">#0e1b2e</color>
+    <color name="background_material_light">#ffffff</color>
+    <color name="background_floating_material_dark">#16213e</color>
+    <color name="background_floating_material_light">#f8f9fa</color>
+    
+    <!-- Surface Colors -->
+    <color name="surface_material_dark">#1a1a2e</color>
+    <color name="surface_material_light">#ffffff</color>
+    <color name="surface_variant_material_dark">#16213e</color>
+    <color name="surface_variant_material_light">#f1f3f4</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary_material_dark">#ffffff</color>
+    <color name="text_primary_material_light">#212121</color>
+    <color name="text_secondary_material_dark">#b3b3b3</color>
+    <color name="text_secondary_material_light">#757575</color>
+    
+    <!-- Button Colors -->
+    <color name="button_material_dark">#4a90e2</color>
+    <color name="button_material_light">#357abd</color>
+    <color name="button_text_material_dark">#ffffff</color>
+    <color name="button_text_material_light">#ffffff</color>
+    
+    <!-- Dialog Colors -->
+    <color name="dialog_background_material_dark">#16213e</color>
+    <color name="dialog_background_material_light">#ffffff</color>
+    <color name="dialog_title_text_material_dark">#ffffff</color>
+    <color name="dialog_title_text_material_light">#212121</color>
+    
+    <!-- Card Colors -->
+    <color name="card_background_material_dark">#16213e</color>
+    <color name="card_background_material_light">#ffffff</color>
+    <color name="card_foreground_material_dark">#ffffff</color>
+    <color name="card_foreground_material_light">#212121</color>
+    
+    <!-- Navigation Colors -->
+    <color name="navigation_bar_color">#1a1a2e</color>
+    <color name="navigation_bar_divider_color">#0f3460</color>
+    <color name="navigation_bar_text_color">#ffffff</color>
+    
+    <!-- Status Bar Colors -->
+    <color name="status_bar_color">#1a1a2e</color>
+    <color name="status_bar_text_color">#ffffff</color>
+    <color name="status_bar_icon_color">#ffffff</color>
+    
+    <!-- Progress Colors -->
+    <color name="progress_primary_material_dark">#4a90e2</color>
+    <color name="progress_primary_material_light">#357abd</color>
+    <color name="progress_secondary_material_dark">#16213e</color>
+    <color name="progress_secondary_material_light">#e0e0e0</color>
+    
+    <!-- Switch Colors -->
+    <color name="switch_thumb_material_dark">#4a90e2</color>
+    <color name="switch_thumb_material_light">#357abd</color>
+    <color name="switch_track_material_dark">#16213e</color>
+    <color name="switch_track_material_light">#e0e0e0</color>
+    
+    <!-- Checkbox Colors -->
+    <color name="checkbox_material_dark">#4a90e2</color>
+    <color name="checkbox_material_light">#357abd</color>
+    <color name="checkbox_background_material_dark">#16213e</color>
+    <color name="checkbox_background_material_light">#ffffff</color>
+    
+    <!-- Radio Button Colors -->
+    <color name="radio_button_material_dark">#4a90e2</color>
+    <color name="radio_button_material_light">#357abd</color>
+    <color name="radio_button_background_material_dark">#16213e</color>
+    <color name="radio_button_background_material_light">#ffffff</color>
+    
+    <!-- Slider Colors -->
+    <color name="slider_active_material_dark">#4a90e2</color>
+    <color name="slider_active_material_light">#357abd</color>
+    <color name="slider_inactive_material_dark">#16213e</color>
+    <color name="slider_inactive_material_light">#e0e0e0</color>
+    
+    <!-- Tab Colors -->
+    <color name="tab_indicator_material_dark">#4a90e2</color>
+    <color name="tab_indicator_material_light">#357abd</color>
+    <color name="tab_text_material_dark">#ffffff</color>
+    <color name="tab_text_material_light">#212121</color>
+    
+    <!-- Toolbar Colors -->
+    <color name="toolbar_background_material_dark">#1a1a2e</color>
+    <color name="toolbar_background_material_light">#ffffff</color>
+    <color name="toolbar_text_material_dark">#ffffff</color>
+    <color name="toolbar_text_material_light">#212121</color>
+    
+    <!-- List Colors -->
+    <color name="list_divider_material_dark">#0f3460</color>
+    <color name="list_divider_material_light">#e0e0e0</color>
+    <color name="list_item_background_material_dark">#16213e</color>
+    <color name="list_item_background_material_light">#ffffff</color>
+    
+    <!-- Notification Colors -->
+    <color name="notification_background_material_dark">#16213e</color>
+    <color name="notification_background_material_light">#ffffff</color>
+    <color name="notification_text_material_dark">#ffffff</color>
+    <color name="notification_text_material_light">#212121</color>
+    
+    <!-- Toast Colors -->
+    <color name="toast_background_material_dark">#16213e</color>
+    <color name="toast_background_material_light">#323232</color>
+    <color name="toast_text_material_dark">#ffffff</color>
+    <color name="toast_text_material_light">#ffffff</color>
+    
+    <!-- Popup Colors -->
+    <color name="popup_background_material_dark">#16213e</color>
+    <color name="popup_background_material_light">#ffffff</color>
+    <color name="popup_text_material_dark">#ffffff</color>
+    <color name="popup_text_material_light">#212121</color>
+    
+    <!-- Spinner Colors -->
+    <color name="spinner_background_material_dark">#16213e</color>
+    <color name="spinner_background_material_light">#ffffff</color>
+    <color name="spinner_text_material_dark">#ffffff</color>
+    <color name="spinner_text_material_light">#212121</color>
+    
+    <!-- EditText Colors -->
+    <color name="edittext_background_material_dark">#16213e</color>
+    <color name="edittext_background_material_light">#ffffff</color>
+    <color name="edittext_text_material_dark">#ffffff</color>
+    <color name="edittext_text_material_light">#212121</color>
+    <color name="edittext_hint_material_dark">#b3b3b3</color>
+    <color name="edittext_hint_material_light">#757575</color>
+    
+    <!-- Ripple Colors -->
+    <color name="ripple_material_dark">#33ffffff</color>
+    <color name="ripple_material_light">#1f000000</color>
+    <color name="ripple_accent_material_dark">#334a90e2</color>
+    <color name="ripple_accent_material_light">#33357abd</color>
+    
+</resources>
